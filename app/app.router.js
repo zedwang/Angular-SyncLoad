@@ -14,10 +14,11 @@ app.config(['$stateProvider', '$urlRouterProvider', '$provide','$ocLazyLoadProvi
             modules: jsRequires.modules
         });
 
-        $urlRouterProvider.otherwise("/view1");
+        $urlRouterProvider.otherwise("app/view1");
 
         $stateProvider.state('app', {
-            url: "/",
+            url: "/app",
+            template: "<div ui-view></div>",
             abstract: true,
 
         }).state('app.view1', {
